@@ -1,6 +1,6 @@
 Name: flameshot
 Version: 0.5.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 
 # Main code: GPLv3
 # Logo: Free Art License v1.3
@@ -28,7 +28,7 @@ BuildRequires: gcc-c++
 BuildRequires: gcc
 
 %description
-Powerful and simple to use software with built-in screenshot
+Powerful and simple to use screenshot software with built-in
 editor with advanced features.
 
 %prep
@@ -62,5 +62,8 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_datadir}/icons/%{name}.png
 
 %changelog
+* Mon Jan 08 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 0.5.0-2
+- Minor SPEC fixes.
+
 * Sat Jan 06 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 0.5.0-1
 - Initial SPEC release.
