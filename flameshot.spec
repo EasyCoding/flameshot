@@ -2,6 +2,13 @@ Name: flameshot
 Version: 0.5.0
 Release: 1%{?dist}
 
+# Main code: GPLv3
+# Logo: Free Art License v1.3
+# Button icons: Apache License 2.0
+# capture/capturewidget.cpp and capture/capturewidget.h: GPLv2
+# regiongrabber.cpp: LGPL
+# Qt-Color-Widgets: LGPL/GPL
+# More information: https://github.com/lupoDharkael/flameshot#license
 License: GPLv3+ and ASL 2.0 and GPLv2 and LGPLv3 and Free Art
 Summary: Powerful and simple to use screenshot software
 
