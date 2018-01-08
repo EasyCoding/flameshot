@@ -2,7 +2,7 @@ Name: flameshot
 Version: 0.5.0
 Release: 1%{?dist}
 
-License: GPLv3+ and Apache 2.0 and GPLv2 and LGPLv3
+License: GPLv3+ and ASL 2.0 and GPLv2 and LGPLv3 and Free Art
 Summary: Powerful and simple to use screenshot software
 
 URL: https://github.com/lupoDharkael/flameshot
