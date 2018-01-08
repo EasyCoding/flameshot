@@ -14,7 +14,12 @@ Summary: Powerful and simple to use screenshot software
 
 URL: https://github.com/lupoDharkael/flameshot
 Source0: %{url}/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
-Patch0: %{name}-0.5.0-fix-desktop.patch
+
+# https://github.com/lupoDharkael/flameshot/pull/69
+Patch100: %{name}-0.5.0-fix-desktop.patch
+
+# https://github.com/lupoDharkael/flameshot/pull/68
+Patch101: %{name}-0.5.0-add-appdata.patch
 
 BuildRequires: pkgconfig(Qt5Widgets)
 BuildRequires: pkgconfig(Qt5Network)
@@ -23,6 +28,7 @@ BuildRequires: pkgconfig(Qt5Concurrent)
 BuildRequires: pkgconfig(Qt5DBus)
 
 BuildRequires: desktop-file-utils
+BuildRequires: libappstream-glib
 BuildRequires: qt5-linguist
 BuildRequires: gcc-c++
 BuildRequires: gcc
@@ -47,6 +53,7 @@ popd
 %find_lang Internationalization --with-qt
 
 %check
+appstream-util validate-relax --nonet "%{buildroot}%{_datadir}/appdata/%{name}.appdata.xml"
 desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 
 %files -f Internationalization.lang
@@ -56,6 +63,7 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %dir %{_datadir}/%{name}/translations
 %{_bindir}/%{name}
 %{_datadir}/applications/*.desktop
+%{_datadir}/appdata/%{name}.appdata.xml
 %{_datadir}/bash-completion/completions/%{name}
 %{_datadir}/dbus-1/interfaces/*.xml
 %{_datadir}/dbus-1/services/*.service
