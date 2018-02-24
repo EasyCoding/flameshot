@@ -1,6 +1,6 @@
 Name: flameshot
-Version: 0.5.0
-Release: 2%{?dist}
+Version: 0.5.1
+Release: 1%{?dist}
 
 # Main code: GPLv3
 # Logo: Free Art License v1.3
@@ -14,12 +14,6 @@ Summary: Powerful and simple to use screenshot software
 
 URL: https://github.com/lupoDharkael/flameshot
 Source0: %{url}/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
-
-# https://github.com/lupoDharkael/flameshot/pull/69
-Patch100: %{name}-0.5.0-fix-desktop.patch
-
-# https://github.com/lupoDharkael/flameshot/pull/68
-Patch101: %{name}-0.5.0-add-appdata.patch
 
 BuildRequires: pkgconfig(Qt5Widgets)
 BuildRequires: pkgconfig(Qt5Network)
@@ -70,6 +64,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_datadir}/icons/%{name}.png
 
 %changelog
+* Sat Feb 24 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 0.5.1-1
+- Updated to version 0.5.1.
+
 * Mon Jan 08 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 0.5.0-2
 - Minor SPEC fixes.
 
