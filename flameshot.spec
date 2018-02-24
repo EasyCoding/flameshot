@@ -47,7 +47,7 @@ popd
 %find_lang Internationalization --with-qt
 
 %check
-appstream-util validate-relax --nonet "%{buildroot}%{_datadir}/appdata/%{name}.appdata.xml"
+appstream-util validate-relax --nonet "%{buildroot}%{_datadir}/metainfo/%{name}.appdata.xml"
 desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 
 %files -f Internationalization.lang
@@ -57,7 +57,7 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %dir %{_datadir}/%{name}/translations
 %{_bindir}/%{name}
 %{_datadir}/applications/*.desktop
-%{_datadir}/appdata/%{name}.appdata.xml
+%{_datadir}/metainfo/%{name}.appdata.xml
 %{_datadir}/bash-completion/completions/%{name}
 %{_datadir}/dbus-1/interfaces/*.xml
 %{_datadir}/dbus-1/services/*.service
