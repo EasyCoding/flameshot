@@ -20,6 +20,7 @@ BuildRequires: pkgconfig(Qt5Network)
 BuildRequires: pkgconfig(Qt5Multimedia)
 BuildRequires: pkgconfig(Qt5Concurrent)
 BuildRequires: pkgconfig(Qt5DBus)
+BuildRequires: cmake(Qt5Svg)
 
 BuildRequires: desktop-file-utils
 BuildRequires: libappstream-glib
