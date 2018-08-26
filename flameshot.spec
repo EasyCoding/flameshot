@@ -53,7 +53,7 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 
 %files -f Internationalization.lang
 %doc README.md
-%license LICENSE img/flameshotLogoLicense.txt
+%license LICENSE img/app/flameshotLogoLicense.txt
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/translations
 %{_bindir}/%{name}
