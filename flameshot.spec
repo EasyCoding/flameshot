@@ -62,7 +62,7 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_datadir}/bash-completion/completions/%{name}
 %{_datadir}/dbus-1/interfaces/*.xml
 %{_datadir}/dbus-1/services/*.service
-%{_datadir}/icons/%{name}.png
+%{_datadir}/icons/hicolor/*/apps/%{name}.*
 
 %changelog
 * Sun Aug 26 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 0.6.0-1
