@@ -1,6 +1,6 @@
 Name: flameshot
-Version: 0.5.1
-Release: 2%{?dist}
+Version: 0.6.0
+Release: 1%{?dist}
 
 # Main code: GPLv3
 # Logo: Free Art License v1.3
@@ -64,6 +64,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_datadir}/icons/%{name}.png
 
 %changelog
+* Sun Aug 26 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 0.6.0-1
+- Updated to version 0.6.0.
+
 * Fri Jul 13 2018 Fedora Release Engineering <releng@fedoraproject.org> - 0.5.1-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
 
