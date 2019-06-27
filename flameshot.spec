@@ -1,6 +1,6 @@
 Name: flameshot
 Version: 0.6.0
-Release: 2%{?dist}
+Release: 3%{?dist}
 
 # Main code: GPLv3
 # Logo: Free Art License v1.3
@@ -27,6 +27,9 @@ BuildRequires: libappstream-glib
 BuildRequires: qt5-linguist
 BuildRequires: gcc-c++
 BuildRequires: gcc
+
+Requires: hicolor-icon-theme
+Requires: qt5-qtsvg%{?_isa}
 
 %description
 Powerful and simple to use screenshot software with built-in
@@ -65,6 +68,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.*
 
 %changelog
+* Thu Jun 27 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 0.6.0-3
+- Added missing runtime requirements (rhbz#1724679).
+
 * Thu Jan 31 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.6.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
 
