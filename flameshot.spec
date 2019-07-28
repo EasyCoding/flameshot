@@ -1,6 +1,6 @@
 Name: flameshot
 Version: 0.6.0
-Release: 3%{?dist}
+Release: 4%{?dist}
 
 # Main code: GPLv3
 # Logo: Free Art License v1.3
@@ -68,6 +68,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.*
 
 %changelog
+* Thu Jul 25 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.6.0-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
+
 * Thu Jun 27 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 0.6.0-3
 - Added missing runtime requirements (rhbz#1724679).
 
