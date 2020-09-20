@@ -53,18 +53,21 @@ editor with advanced features.
 %find_lang Internationalization --with-qt
 
 %check
-appstream-util validate-relax --nonet "%{buildroot}%{_datadir}/metainfo/%{name}.appdata.xml"
+appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/%{name}.metainfo.xml
 desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 
 %files -f Internationalization.lang
 %doc README.md
-%license LICENSE img/app/flameshotLogoLicense.txt
+%license LICENSE
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/translations
+%dir %{_datadir}/bash-completion/completions
+%dir %{_datadir}/zsh/site-functions
 %{_bindir}/%{name}
 %{_datadir}/applications/*.desktop
-%{_datadir}/metainfo/%{name}.appdata.xml
+%{_metainfodir}/%{name}.metainfo.xml
 %{_datadir}/bash-completion/completions/%{name}
+%{_datadir}/zsh/site-functions/_%{name}
 %{_datadir}/dbus-1/interfaces/*.xml
 %{_datadir}/dbus-1/services/*.service
 %{_datadir}/icons/hicolor/*/apps/%{name}.*
