@@ -1,3 +1,5 @@
+%undefine __cmake_in_source_build
+
 Name: flameshot
 Version: 0.8.0
 Release: 1%{?dist}
@@ -40,17 +42,14 @@ editor with advanced features.
 
 %prep
 %autosetup -p1
-mkdir %{_target_platform}
 
 %build
-pushd %{_target_platform}
-    %qmake_qt5 PREFIX=%{_prefix} CONFIG+=packaging ..
-popd
-
-%make_build -C %{_target_platform}
+%cmake -G Ninja \
+    -DCMAKE_BUILD_TYPE=Release
+%cmake_build
 
 %install
-%make_install INSTALL_ROOT=%{buildroot} -C %{_target_platform}
+%cmake_install
 %find_lang Internationalization --with-qt
 
 %check
