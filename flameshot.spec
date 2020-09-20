@@ -14,17 +14,21 @@ Summary: Powerful and simple to use screenshot software
 URL: https://github.com/lupoDharkael/flameshot
 Source0: %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
 
-BuildRequires: pkgconfig(Qt5Widgets)
-BuildRequires: pkgconfig(Qt5Network)
-BuildRequires: pkgconfig(Qt5Multimedia)
-BuildRequires: pkgconfig(Qt5Concurrent)
-BuildRequires: pkgconfig(Qt5DBus)
+BuildRequires: cmake(Qt5LinguistTools)
+BuildRequires: cmake(Qt5Multimedia)
+BuildRequires: cmake(Qt5Concurrent)
+BuildRequires: cmake(Qt5Widgets)
+BuildRequires: cmake(Qt5Network)
+BuildRequires: cmake(Qt5Core)
+BuildRequires: cmake(Qt5DBus)
+BuildRequires: cmake(Qt5Gui)
 BuildRequires: cmake(Qt5Svg)
 
 BuildRequires: desktop-file-utils
 BuildRequires: libappstream-glib
-BuildRequires: qt5-linguist
+BuildRequires: ninja-build
 BuildRequires: gcc-c++
+BuildRequires: cmake
 BuildRequires: gcc
 
 Requires: hicolor-icon-theme
