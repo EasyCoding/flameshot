@@ -11,9 +11,8 @@ Release: 1%{?dist}
 # More information: https://github.com/lupoDharkael/flameshot#license
 License: GPLv3+ and ASL 2.0 and GPLv2 and LGPLv3 and Free Art
 Summary: Powerful and simple to use screenshot software
-
 URL: https://github.com/lupoDharkael/flameshot
-Source0: %{url}/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source0: %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires: pkgconfig(Qt5Widgets)
 BuildRequires: pkgconfig(Qt5Network)
