@@ -1,7 +1,7 @@
 %undefine __cmake_in_source_build
 
 Name: flameshot
-Version: 0.8.0
+Version: 0.8.1
 Release: 1%{?dist}
 
 # Main code: GPLv3
@@ -73,6 +73,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.*
 
 %changelog
+* Thu Sep 24 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 0.8.1-1
+- Updated to version 0.8.1.
+
 * Sun Sep 20 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 0.8.0-1
 - Updated to version 0.8.0.
 
