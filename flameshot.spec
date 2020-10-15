@@ -1,7 +1,7 @@
 %undefine __cmake_in_source_build
 
 Name: flameshot
-Version: 0.8.3
+Version: 0.8.5
 Release: 1%{?dist}
 
 # Main code: GPLv3
@@ -30,6 +30,7 @@ BuildRequires: desktop-file-utils
 BuildRequires: libappstream-glib
 BuildRequires: ninja-build
 BuildRequires: gcc-c++
+BuildRequires: fdupes
 BuildRequires: cmake
 BuildRequires: gcc
 
@@ -51,9 +52,10 @@ editor with advanced features.
 %install
 %cmake_install
 %find_lang Internationalization --with-qt
+%fdupes %{buildroot}%{_datadir}/icons
 
 %check
-appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/%{name}.metainfo.xml
+appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/*.metainfo.xml
 desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 
 %files -f Internationalization.lang
@@ -65,14 +67,17 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %dir %{_datadir}/zsh/site-functions
 %{_bindir}/%{name}
 %{_datadir}/applications/*.desktop
-%{_metainfodir}/%{name}.metainfo.xml
+%{_metainfodir}/*.metainfo.xml
 %{_datadir}/bash-completion/completions/%{name}
 %{_datadir}/zsh/site-functions/_%{name}
 %{_datadir}/dbus-1/interfaces/*.xml
 %{_datadir}/dbus-1/services/*.service
-%{_datadir}/icons/hicolor/*/apps/%{name}.*
+%{_datadir}/icons/hicolor/*/apps/*
 
 %changelog
+* Thu Oct 15 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 0.8.5-1
+- Updated to version 0.8.5.
+
 * Tue Sep 29 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 0.8.3-1
 - Updated to version 0.8.3.
 
