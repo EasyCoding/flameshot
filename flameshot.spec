@@ -73,6 +73,7 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_datadir}/dbus-1/interfaces/*.xml
 %{_datadir}/dbus-1/services/*.service
 %{_datadir}/icons/hicolor/*/apps/*
+%{_mandir}/man1/%{name}.1*
 
 %changelog
 * Wed Jul 14 2021 Vitaly Zaitsev <vitaly@easycoding.org> - 0.10.0-1
